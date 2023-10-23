@@ -1,0 +1,12 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main %}
+    <h2>{{ object.title }}</h2>
+    <div class="body">
+        {{ object.body }}
+    </div>
+    <a href="{%  url 'posts:posts-index' %}">Back to list</a>
+{% endblock %}

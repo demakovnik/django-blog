@@ -1,0 +1,11 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main %}
+    <h2>Index page</h2>
+    <a href="{%  url 'users:users-index' %}">Users list</a><br>
+    <a href="{%  url 'posts:posts-index' %}">Posts list</a>
+
+{% endblock %}
