@@ -5,11 +5,11 @@
 {% endblock %}
 {% block main %}
     <h2>Posts</h2>
-    <ul>
+    <ol>
         {% for post in post_list %}
             <li><a href="{% url 'main:post-detail' post.pk %}">{{ post.title }}</a></li>
         {% endfor %}
-    </ul>
+    </ol>
     <a href="{%  url 'main:index' %}">Back to Main</a>
 
 {% endblock %}

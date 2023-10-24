@@ -1,15 +1,13 @@
 {% extends 'root.html' %}
-
 {% block title %}
     {{ page_title }}
 {% endblock %}
 {% block main %}
     <h2>Users</h2>
-    <ul>
+    <ol>
         {% for user in user_list %}
             <li><a href="{% url 'main:user-detail' user.pk %}">{{ user.login }}</a></li>
         {% endfor %}
-    </ul>
+    </ol>
     <a href="{%  url 'main:index' %}">Back to Main</a>
-
 {% endblock %}
