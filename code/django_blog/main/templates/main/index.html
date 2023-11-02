@@ -5,7 +5,8 @@
 {% endblock %}
 {% block main %}
     <h2>Index page</h2>
-    <a href="{%  url 'users:users-index' %}">Users list</a><br>
-    <a href="{%  url 'posts:posts-index' %}">Posts list</a>
-
+    <a href="{%  url 'authentication:register' %}">Register User</a><br>
+    <a href="{%  url 'authentication:login' %}">Login</a><br>
+    <a href="{%  url 'main:posts-index' %}">Posts list</a><br>
+    <a href="{%  url 'authentication:users-index' %}">Users list</a>
 {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'root.html' %}
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+{% block main %}
+    <h2><span class="name">{{ object.first_name }}</span> <span class="surname">{{ object.last_name }}</span></h2>
+    <p>First name: {{ object.first_name }}</p>
+    <p>Last name: {{ object.last_name }}</p>
+    <p>Username: {{ object.username }}</p>
+    <p>Email: {{ object.email }}</p>
+    <p>Birthdate: {{ object.birth_date }}</p>
+    <div class="body">
+        {{ object.body }}
+    </div>
+    <a href="{%  url 'authentication:users-index' %}">Back to list</a>
+{% endblock %}

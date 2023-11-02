@@ -1,0 +1,12 @@
+{% extends 'root.html' %}
+
+{% block main %}
+    <div class="user-creation-form">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="save">
+        </form>
+    </div>
+
+{% endblock %}
