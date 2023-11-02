@@ -1,9 +1,6 @@
-import pytest
-
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from django.urls import reverse
-
 from django.utils.translation import gettext_lazy as _
 
 from authentication.models import User
@@ -79,3 +76,7 @@ class UserRegisterTest(TestCase):
         self.assertIsNotNone(user_from_context)
         self.assertTrue(user_from_context.is_authenticated)
         self.assertEqual(200, response.status_code)
+
+    def test_users_count(self):
+        users_count = User.objects.count()  # db level, F()
+        self.assertEqual(users_count, 1)
